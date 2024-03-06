@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Virtual Keyboard using ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project implements a virtual keyboard using ReactJS, allowing users to interact with the keyboard by clicking on keys. The interface responds accordingly, providing a seamless typing experience. The project utilizes functional components and manages state to handle keypress and character input logic using JSX.
 
-## Available Scripts
+## Technologies Used/Prerequisites
 
-In the project directory, you can run:
+- ReactJS
+- CSS
+- JSX
+- Functional Components in React
 
-### `npm start`
+## Approach/Functionalities
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A virtual keyboard serves as a software-based input interface that emulates a physical keyboard on a digital device. Key functionalities include:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **User Input Simulation:** Enables users to input text and commands by clicking on virtual keys, replicating physical keyboard functionality.
+- **Accessibility:** Enhances accessibility for individuals with physical disabilities by offering alternative input methods.
+- **Security:** Virtual keyboards can provide secure data entry, guarding against keyloggers and other security threats.
+- **Integration:** They can be seamlessly integrated into various applications such as kiosks, touch-screen devices, and software interfaces to facilitate text input and interaction.
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+project/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── Keyboard.js
+│   │   └── Keyboard.css
+│   │
+│   ├── App.js
+│   └── index.js
+│
+└── package.json
+```
 
-### `npm run build`
+## Steps to create the application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Set up React project:**
+   Create a new React project using the following command:
+   ```bash
+   npx create-react-app my-virtual-keyboard
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to project folder:**
+   Change directory to the project folder:
+   ```bash
+   cd my-virtual-keyboard
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Create components folder:**
+   Inside the `src` directory, create a folder named `components`:
+   ```bash
+   mkdir src/components
+   ```
 
-### `npm run eject`
+4. **Add files:**
+   Inside the `components` folder, add two new files:
+   - `Keyboard.js`
+   - `Keyboard.css`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. **Import icon pack:**
+   In the `index.html` file located in the `public` folder, import the icon pack within the `<head>` tag:
+   ```html
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. **Code Example:**
+   Below is an example code snippet for each file:
+   - `index.html`: Automatically created file in the public folder. Just import the icon pack in its `<head>` tag.
+   - `App.js`: Imports the Keyboard component and exports it.
+   - `Keyboard.js`: Contains logic for the virtual keyboard, keypress, and input text block with state variable.
+   - `Keyboard.css`: Contains the design of the virtual keyboard elements.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
